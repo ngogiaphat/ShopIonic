@@ -1,0 +1,7 @@
+{
+  "name": "shopionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
