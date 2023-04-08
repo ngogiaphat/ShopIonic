@@ -6,16 +6,24 @@
     "moduleResolution": "Node",
     "strict": true,
     "jsx": "preserve",
+    "importHelpers": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "noEmit": true,
+    "types": [
+      "webpack-env",
+      "jest"
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.js", "src/router/index.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
