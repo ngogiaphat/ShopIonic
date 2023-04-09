@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import { RouteRecordRaw } from 'vue-router';
-import HomePage from '../views/HomePage.vue'
 import MemoriesPage from '../pages/MemoriesPage.vue';
 const routes = [
   {
@@ -13,12 +11,15 @@ const routes = [
   },
   {
     path: '/memories/:id',
-    component:() => import('../pages/MemoryDetails.vue')
+    component:() => import('../pages/MemoryDetailsPage.vue')
+  },
+  {
+    path:'/memories/add',
+    component:() => import('../pages/AddMemoryPage.vue')
   }
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
-
 export default router
